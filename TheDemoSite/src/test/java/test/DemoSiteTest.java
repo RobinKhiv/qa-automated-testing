@@ -35,7 +35,7 @@ public class DemoSiteTest {
 	
 	@AfterAll
 	public static void teardown() {
-		
+		driver.quit();
 	}
 	
 	@Test
