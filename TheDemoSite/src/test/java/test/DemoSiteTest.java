@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DemoSiteTest {
 
@@ -12,7 +13,9 @@ public class DemoSiteTest {
 	
 	@BeforeAll
 	public static void init() {
-		
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().fullscreen();
 	}
 	
 	@BeforeEach
