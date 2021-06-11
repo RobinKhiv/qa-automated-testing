@@ -5,13 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class AddUser {
 
-	@FindBy(xpath = "//tbody/tr[1]/td[2]/p[1]/input[1]")
+	@FindBy(name = "username")
 	private WebElement userInput;
 
-	@FindBy(xpath = "//tbody/tr[1]/td[2]/p[1]/input[1]")
+	@FindBy(name = "password")
 	private WebElement passInput;
 
-	public void signUp(String username, String password) {
+	public void info(String username, String password) {
 		userInput.sendKeys(username);
 		passInput.sendKeys(password);
 		passInput.submit();
