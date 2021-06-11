@@ -8,7 +8,7 @@ public class Searchbar {
 	@FindBy(id = "search_query_top")
 	private WebElement searchbar;
 	
-	public void search(String searchkey) {
+	public void find(String searchkey) {
 		searchbar.sendKeys(searchkey);
 		searchbar.submit();
 	}
